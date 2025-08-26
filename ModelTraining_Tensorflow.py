@@ -8,8 +8,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential 
 
-dataDir = '/Users/ianbogley/Desktop/Data Science/image recognition/Image Character Reader/data/2025-08-12'
-os.chdir('/Users/ianbogley/Desktop/Data Science/image recognition/Image Character Reader')
+dataDir = 'data/2025-08-25'
 
 
 train = tf.keras.utils.image_dataset_from_directory(
