@@ -153,6 +153,7 @@ if __name__ == "__main__":
     results = parallel_generate(characters, n=10000)
     print("Done!")
 
+write_csv(pd.concat(results), 'data/log.csv', index=False)
 
 #log = pd.DataFrame({
 #    'set': [],
