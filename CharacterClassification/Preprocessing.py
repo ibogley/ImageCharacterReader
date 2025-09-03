@@ -10,8 +10,8 @@ class DatasetGrayscale:
     def __init__(self,train_portion = .8, seed=42,data_dir = None):
         # If no data directory is provided, use the last one in the 'data' folder
         if data_dir is None:
-            data_dir = 'data/'+os.listdir('data')[-1]
-        
+            data_dir = 'CharacterClassification/data/'+os.listdir('CharacterClassification/data')[-1]
+
         #Preprocess data to grayscale
         self.transform = transforms.Compose([
             transforms.Resize((100, 100)),

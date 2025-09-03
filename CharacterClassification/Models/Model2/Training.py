@@ -10,8 +10,8 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import os
 import numpy as np
-from Preprocessing import DatasetGrayscale
-import Preprocessing
+from CharacterClassification.Preprocessing import DatasetGrayscale
+import CharacterClassification.Preprocessing
 # ----------------------------
 # 1. Device configuration & Data loading
 # ----------------------------
@@ -169,7 +169,8 @@ if __name__ == "__main__":
     endtime = datetime.datetime.now()
     print(f"Training complete in: {endtime - starttime}")
     history_df = pd.DataFrame(history)
-    write.csv(history_df, 'Models/Model2/training_history.csv', index=False)
+    
+    history_df.to_csv('CharacterClassification/Models/Model2/training_history.csv', index=False)
 
     #Save the model
     torch.save(model.state_dict(), f'Models/Model2/model2.pth')

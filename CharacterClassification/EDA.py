@@ -3,7 +3,7 @@ import numpy as np
 import torch
 import pandas as pd
 
-model = torch.load('Models/Model1/Model1.pth')
+model = torch.load('CharacterClassification/Models/Model1/Model1.pth')
 
 def get_class_distribution_fast(dataset):
     """

@@ -1,0 +1,10 @@
+import cv2
+from matplotlib import pyplot as plt
+import os
+
+os.listdir('ImageDetection/')
+os.path.join('ImageDetection/', 'IMG_1996.jpg')
+img = cv2.imread(os.path.join('ImageDetection/', 'IMG_1996.jpg'))
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.axis('off')
+plt.show()
